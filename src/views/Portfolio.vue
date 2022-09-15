@@ -2,6 +2,7 @@
   <div
     class="images-container images-container--large"
   >
+    <!-- {{ isLoading }} -->
     <div
       v-for="(image, i) in imagesLargeTop"
       :key="i"
@@ -88,7 +89,8 @@ export default {
     return {
       images: [],
       showFullImage: false,
-      fullImagePath: null
+      fullImagePath: null,
+      isLoading: true
     }
   },
   computed: {
@@ -121,7 +123,7 @@ export default {
     this.importAll(import.meta.globEager("../assets/img/portfolio/*.jpg"))
   },
   methods: {
-    importAll(r) {
+    async importAll(r) {
       Object.keys(r).forEach(key => {
         this.images.push({ pathLong: r[key].default, pathShort: key })
       })

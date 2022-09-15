@@ -34,6 +34,11 @@ export default {
       zoomIn: false
     }
   },
+  computed: {
+    path() {
+      return import.meta.env.BASE_URL
+    }
+  },
   created() {
     let that = this;
     document.addEventListener('keyup', function (evt) {
@@ -66,10 +71,10 @@ export default {
     align-items: center;
     background: rgba(0,0,0,.85);
     padding: 30px;
-    cursor: url('src/assets/img/x.png'), auto;
+    cursor: url('/x.png'), auto;
     .full-image{
       height: 100%;
-      cursor: url('src/assets/img/plus.png'), auto;	
+      cursor: url('/plus.png'), auto;
       img{
         max-height: 100%;
       }
@@ -77,7 +82,7 @@ export default {
     &.zoom-in{
       overflow: scroll;
       .full-image{
-        cursor: url('src/assets/img/minus.png'), auto;	
+        cursor: url('/minus.png'), auto;	
         img{
           max-height: none;
         }

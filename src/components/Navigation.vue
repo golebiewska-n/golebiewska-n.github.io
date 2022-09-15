@@ -6,8 +6,12 @@
     <RouterLink to="/contact">
       contact
     </RouterLink>
-    <a class="instagram-link" href="https://instagram.com/nati.krati" target="_blank">
-      <img src="src/assets/img/instagram.png">
+    <a
+      class="instagram-link"
+      href="https://instagram.com/nati.krati"
+      target="_blank"
+    >
+      <img src="/src/assets/img/instagram.png">
     </a>
   </nav>
 </template>
